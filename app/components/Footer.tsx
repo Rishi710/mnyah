@@ -68,7 +68,7 @@ export function Footer() {
               <span className="text-muted">made to last.</span>
             </p>
           </div>
-          <div className="lg:pb-1">
+          <div className="min-w-0 lg:pb-1">
             <p className="mb-4 max-w-md text-[14px] leading-relaxed text-[#555]">
               Early access to new drops, restocks and quiet edits — straight to your inbox. No noise.
             </p>
@@ -78,7 +78,7 @@ export function Footer() {
 
         {/* Brand, links and contact */}
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 py-12 sm:grid-cols-3 lg:grid-cols-[1.5fr_1fr_1.1fr_1fr_1.4fr] lg:gap-x-10 lg:py-16">
-          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
+          <div className="col-span-2 flex flex-col items-center text-center sm:col-span-3 sm:items-start sm:text-left lg:col-span-1">
             <Image
               src="/mnyah-logo-transparent.png"
               alt="Mnyah"
@@ -90,7 +90,7 @@ export function Footer() {
             <p className="mt-5 max-w-[260px] text-[13px] leading-relaxed text-[#555]">
               Curated essentials for an intentional wardrobe designed in India.
             </p>
-            <ul className="mt-6 flex flex-wrap gap-2" aria-label="Social media">
+            <ul className="mt-6 flex flex-wrap justify-center gap-2 sm:justify-start" aria-label="Social media">
               {SOCIALS.map(({ name, href }) => {
                 const Icon = SOCIAL_ICONS[name];
                 return (
@@ -123,7 +123,7 @@ export function Footer() {
             </nav>
           ))}
 
-          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
+          <div className="sm:col-span-3 lg:col-span-1">
             <ColumnLabel>Get in touch</ColumnLabel>
             <address className="flex flex-col gap-4 text-[14px] not-italic leading-relaxed text-[#444] sm:flex-row sm:flex-wrap sm:gap-x-10 lg:flex-col lg:gap-4">
               <p className="flex max-w-[280px] items-start gap-3">

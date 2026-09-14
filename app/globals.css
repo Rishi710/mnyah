@@ -6,6 +6,9 @@
   --color-muted: #6b6b6b;
   --color-line: #dcdcdc;
   --color-open: #12a107;
+  --color-leaf: #6b7a3a;
+  --color-lotus: #e0788b;
+  --color-blush: #faf3f1;
 
   --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
 

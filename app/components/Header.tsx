@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { NAV } from "../data";
-import { BagIcon, BookmarkIcon, CloseIcon, PinIcon, SearchIcon, UserIcon } from "./Icons";
+import { BagIcon, BookmarkIcon, CloseIcon, SearchIcon, UserIcon } from "./Icons";
 
 export function Header() {
   const [solid, setSolid] = useState(false);
@@ -32,7 +33,7 @@ export function Header() {
           light ? "bg-transparent text-white" : "bg-white text-ink"
         }`}
       >
-        <div className="grid h-14 grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6">
+        <div className="grid h-20 grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6">
           <nav className="hidden items-center gap-6 text-[13px] md:flex" aria-label="Primary">
             <Link href="#latest-drop" className="hover:opacity-60">New in</Link>
             <Link href="#collections" className="hover:opacity-60">Collections</Link>
@@ -43,18 +44,19 @@ export function Header() {
             </button>
           </div>
 
-          <Link
-            href="/"
-            className="text-[22px] font-extrabold uppercase leading-none tracking-[0.18em]"
-            aria-label="Mnyah home"
-          >
-            Mnyah
+          <Link href="/" aria-label="Mnyah home" className="block">
+            <Image
+              src="/mnyah-logo-transparent.png"
+              alt="Mnyah"
+              width={1086}
+              height={675}
+              preload
+              sizes="96px"
+              className="h-[72px] w-auto"
+            />
           </Link>
 
           <div className="flex items-center justify-end gap-4 sm:gap-5">
-            <Link href="#stores" aria-label="Stores" className="hidden hover:opacity-60 sm:block">
-              <PinIcon />
-            </Link>
             <button type="button" aria-label="Search" className="hidden hover:opacity-60 md:block">
               <SearchIcon />
             </button>
@@ -93,7 +95,7 @@ export function Header() {
 
       <div
         id="site-menu"
-        className={`fixed inset-0 z-30 bg-white pt-14 transition-[opacity,visibility] duration-300 ${
+        className={`fixed inset-0 z-30 bg-white pt-16 transition-[opacity,visibility] duration-300 ${
           menuOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
         aria-hidden={!menuOpen}

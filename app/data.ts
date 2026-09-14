@@ -15,14 +15,6 @@ export type Collection = {
   image: string;
 };
 
-export type Store = {
-  city: string;
-  area: string;
-  address: string;
-  image: string;
-  open: boolean;
-};
-
 const IMAGES = [
   "/product-01.jpg",
   "/product-02.jpg",
@@ -69,36 +61,26 @@ export const ESSENTIALS: Product[] = [
 ];
 
 export const COLLECTIONS: Collection[] = [
-  { title: "New Season", href: "#latest-drop", image: "/mnyah-hero.jpg" },
   { title: "Bags", href: "#bags", image: "/product-01.jpg" },
   { title: "Fleece & Knits", href: "#essentials", image: "/product-02.jpg" },
-  { title: "Headwear", href: "#essentials", image: "/product-03.jpg" },
-  { title: "Footwear", href: "#essentials", image: "/product-04.jpg" },
+  { title: "Topwear", href: "#essentials", image: "/product-03.jpg" },
+  { title: "Winter wear", href: "#essentials", image: "/product-04.jpg" },
 ];
 
-export const STORES: Store[] = [
-  {
-    city: "Mumbai",
-    area: "Flagship",
-    address: "Store address — add your flagship location here.",
-    image: "/product-01.jpg",
-    open: true,
-  },
-  {
-    city: "Delhi",
-    area: "Studio",
-    address: "Store address — add your studio location here.",
-    image: "/product-02.jpg",
-    open: true,
-  },
-  {
-    city: "Bengaluru",
-    area: "Studio",
-    address: "Opening soon.",
-    image: "/product-04.jpg",
-    open: false,
-  },
-];
+// Placeholder contact details — replace with the real ones before launch.
+export const CONTACT = {
+  address: "House Of Posh, 1059 A-1, Scheme No. 136, Indore, Madhya Pradesh, India",
+  email: "info@mnyah.com",
+  phone: "+91 6261640918",
+};
+
+export const SOCIALS = [
+  { name: "Instagram", href: "#" },
+  { name: "WhatsApp", href: "#" },
+  { name: "YouTube", href: "#" },
+  { name: "LinkedIn", href: "#" },
+  { name: "Facebook", href: "#" },
+] as const;
 
 export const NAV = {
   Collections: ["New Season", "Essentials", "Bags", "Footwear"],
